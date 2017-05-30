@@ -2,6 +2,12 @@
 # This file contains configuration flags to customize your site
 #
 
+# Here is code I copied from the other webpage in the wheeles directory.
+theme: jekyll-theme-midnight
+# title: Welcome to Wheeles' Homepage!
+# description: I haven't decided exactly how I want this site to go yet.
+# 
+
 # Name of your site (displayed in the header)
 name: Your Name
 
@@ -21,12 +27,12 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: barryclark/jekyll-now
+#  github: barryclark/jekyll-now
   instagram:
   linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: jekyllrb
+#  twitter: jekyllrb
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
