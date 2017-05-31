@@ -1,9 +1,9 @@
+theme: jekyll-theme-midnight
 #
 # This file contains configuration flags to customize your site
 #
 
-# Here is code I copied from the other webpage in the wheeles directory.
-theme: jekyll-theme-midnight
+# Here is code I copied from the other webpage in the wheeles directory:
 # title: Welcome to Wheeles' Homepage!
 # description: I haven't decided exactly how I want this site to go yet.
 # 
