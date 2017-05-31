@@ -73,7 +73,8 @@ kramdown:
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
     css_class: 'highlight'
-
+#  extensions: ['smart']
+  
 # Set the Sass partials directory, as we're using @imports
 sass:
   style: :expanded # You might prefer to minify using :compressed
@@ -82,12 +83,6 @@ sass:
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - rdiscount # To enable smart quotes
-
-# This is the code to enable the smart quotes:
-markdown: rdiscount
-rdiscount:
-extensions: ['smart'] 
 
 # Exclude these files from your production _site
 exclude:
