@@ -24,3 +24,23 @@ typedef struct list {
   struct list *next;     /* point to successor */
 } list;
 ```
+F&G describe three ways to declare or define a structure:
+1. Variable structures
+```C 
+struct { field-list } variable_identifier;
+```
+This method is the most limited because it can only be used for one variable definition; i.e., it is not really a type.  The way I understand this, it means one is really just defining an array that can have varied data types in its entries.
+
+2. Tagged structures
+```C
+struct tag { field-list } variable_identifier;
+```
+Here, I think the tag is what really makes a structure a newly defined data type, called <code>struct tag</code> (with whatever the tag is actually named, for example, "linked-list"), just as <code>int</code> and <code>char</code> are data types.  Then the variable_identifier is the name assigned to a given structure with that tag.
+
+3. Type-defined structures
+```C 
+typedef struct { field-list } TYPE-ID;
+```
+This is the most powerful and recommended method of declaring a structure.  I think the distinction here is that while <code>TYPE-ID</code> is now in the role of <code>tag</code>, the new data type is just called <code>TYPE-ID</code> (again, whatever that type-id is actually named, e.g., "LINKED_LIST", and convention says the name is in all caps)... Otherwise, I don't see any other distinction from the tagged structure method.  Here, the variable_identifier is not included, which then makes the tagged structure method seem redundant.  F&G also says the tagged and typedef methods can be combined into a tagged typed definition... So what exactly is the point of using a tag at all?
+
+Of course, this means in Skiena's example, the definiton of a singly-linked list includes the tag "list" and the type-id "list".  I am not sure how to apply this template to a more concrete example I can give in my data structure study page.
