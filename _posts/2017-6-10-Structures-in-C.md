@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Structures in C
+title: Structures in C.
 ---
 I am working on a page that lists each of the following data structures
 * array list/vector
