@@ -15,7 +15,9 @@ Once I am satisfied with my sorting algorithms study page I want to write a C pr
 
 My C samples for sort algorithms are so far heavily based on those in F&G.  In each case the algorithm is not the main program but a function within it.  Thus I learned something today, when I was wondering why on Earth F&G's functions would take two aruments, the array and the array's size.  I learned C does not have an attribute for an array that gives its size.  I saw some workarounds on [stackexchange.com](https://stackoverflow.com/questions/4081100/c-finding-the-number-of-elements-in-an-array).  A common solution was to use <code>sizeof()</code>.  The <code>sizeof()</code> function gives the _memory_ size of its input (I don't remember if it's in bits or bytes).  So given an array _A_, one can do something like:
 ```c
-size_t array_size_A; /* size_t type is used since sizeof() can return large, but unsigned, numbers */
+size_t array_size_A; 
+  /* size_t type is used since sizeof() can return 
+     large, but unsigned, numbers */
 array_size_A = sizeof(A)/sizeof(A[0]);
 ```
 But then there's a catch!  You can't make a function that does this -- when passing an array to a function C only passes the array's address.  In other words, upon its input in a function the array _A_ becomes a pointer, to the address of _A_.  If an array is defined globally but passed to any function, then <code>sizeof()</code> won't work within that function, either, for the same reason.
