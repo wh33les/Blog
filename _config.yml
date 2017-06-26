@@ -1,13 +1,7 @@
 # This file contains configuration flags to customize your site
-#
-
-# Here is code I copied from the other webpage in the wheeles directory:
-# title: Welcome to Wheeles' Homepage!
-# description: I haven't decided exactly how I want this site to go yet.
-# 
 
 # Name of your site (displayed in the header)
-name: Wheeles
+name: wh33les
 
 # Short bio or description (displayed in the header)
 description: Web Developer from Somewhere
@@ -27,7 +21,7 @@ footer-links:
   email:
   facebook:
   flickr:
-#  github: barryclark/jekyll-now
+  github: wh33les
   instagram:
   linkedin:
   pinterest:
@@ -39,7 +33,7 @@ footer-links:
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus:
+disqus: wh33les
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: UA-100299463-1
