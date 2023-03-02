@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Back to the Blog 
+title: Back to the blog. 
 ---
 Today I saw a repository in my github that I didn't recognize and found out it's a blog I forgot I had created in summer of 2017.  How did I forget about that?  I read all the posts and realized there is a lot about programming that I knew back then and can't recall now.  The blog lasted only about a month, so I guess I must've learned all that stuff that summer.  That gives me hope that I can get more proficient with my coding abilities in the next month or so.
 
