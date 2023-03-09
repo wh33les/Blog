@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Merging two data sets  
+title: Merging two data sets.  
 ---
 Today I spent some more time working on the data science boot camp project.  I read on the [Kaggle](https://www.kaggle.com/datasets/thedevastator/mental-health-in-drug-users-during-covid-19) page the `hash` column did give identifiers for the survey respondents.  So I spent time working on merging the data between the two files.
 
