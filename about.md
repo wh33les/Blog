@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-I got my Ph.,D. in mathematics in 2014.  Since then I have worked at verious institutions as a visiting assistant professor.  Now I am looking to get out of academia and into industry.
+I got my Ph.,D. in mathematics in 2014.  Since then I have worked at various institutions as a visiting assistant professor.  Now I am looking to get out of academia and into industry.
 
 <!--  
 ### More Information
