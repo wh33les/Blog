@@ -14,46 +14,7 @@ So I went with Matt's Facebook idea.  He said the comments on the 538 article sh
 
 So I decided to go back to `selenium`.  During Matt's office hours on Wednesday he had given me this idea to try a switch frame command that would load the webpage embedded in the article page (I had seen on the "inspect element" source that there was an entire `index.html` file embedded in the source code).  It didn't work, and we were both unsure of how to use it anyway, but seeing that idea yesterday among all the other failed code I had commented out working on this project gave me another idea.  And this is the idea that worked!  I spent the rest of last night consolidating all of my scraping code and since scraping the number of comments was the hardest task I made a function that would do it.
 
-``
-def num_comments_538_article(url):
-    # Start the timer to time the execution of each iteration of this function
-    start = time.time()
-    # Function only works when the input is a features article from fivethirtyeight.com
-    print("Current url:", url) # for debugging
-    # Create a webdriver object with selenium that will get the required html    
-    # Here Chrome will be used, but modifications to the code for other browsers exists
-    driver = webdriver.Chrome()
-    # Open the 538 webpage
-    driver.get(url)
-    # Click the expand comments button
-    driver.find_element(By.CLASS_NAME, "fte-expandable-icon").click()
-    # Execute the JavaScript after clicking the button
-    article_html = driver.execute_script("return document.documentElement.outerHTML;")
-    # Close the 538 webpage
-    driver.quit()
-    # Parse the html
-    article_soup = BeautifulSoup(article_html)
-    # Find the iframe corresponding to the comments
-    comments_frame = article_soup.find('iframe', attrs = {'data-testid':"fb:comments Facebook Social Plugin"})
-    # Get the source attribute in the iframe 
-    comments_url = comments_frame['src']
-    # Redefine the webdriver object (needed to avoid errors)
-    driver = webdriver.Chrome()
-    # Open the Facebook comments plugin url
-    driver.get(comments_url)
-    # Execute the JavaScript on that page
-    comments_html = driver.execute_script("return document.documentElement.outerHTML;")
-    # Close the comments page
-    driver.quit()
-    # Parse the rendered code
-    comments_soup = BeautifulSoup(comments_html)
-    # Find the element that contains the number of comments
-    number = comments_soup.find('span',  attrs = {'class':"_50f7"}).text.strip(" comments")
-    # End the timer
-    end = time.time()
-    print("Time elapsed:", end-start, "seconds\n") 
-    return number
-``
+<img src="https://wh33les.github.io/images/comments_function.png" title="comments function" height="100%" width="100%">
 
 I'm still not sure how `selenium` works but at least I learned enough to get this to work.  I found out it could be used to click buttons on webpages, too.  The `driver` object is what opens the article and executes all the JavaScript on that page.  Matt said I might be able to get rid of the first instance of `driver.quit()` and the second instance of `driver = webdriver.Chrome()` but when I tried commenting those lines out the code ran way too slow.
 
