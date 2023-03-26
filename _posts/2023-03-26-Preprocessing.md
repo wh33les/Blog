@@ -16,5 +16,5 @@ In my project problem statement, I'd said I only wanted to analyze the tags on t
 
 I told myself not to include too many long snippets of code in my blog posts, but I have to post this function.  I've been using Jupyter notebooks to run all of my `python`, but I decided when I post code on this blog the most attractive way is to paste it into a Notepad++ file then screenshot.  Markdown's code environments are kind of ugly, and Notepad++ has great syntax highlighting.  Maybe I should see if there is a plugin for Notepad++ that will allow me to compile `python` code.  I know in the past I've been able to set it up to compile LaTeX (and PlainTeX!).  Matt also said that when I get my 500 posts of data, if I'm afraid of the Jupyter kernel crashing, then there is a way to compile `python` in the command line.  I'm a little intimidated by that, so for now I just changed my computer settings to not go to sleep, just to prevent the Jupyter kernel from crashing because of that.  Anyway, here is the function:
 
-<img src="https://wh33les.github.io/images/comments_änalysis.png" title="comments function" height="100%" width="100%">
+<img src="https://wh33les.github.io/images/comments_analysis.png" title="comments function" height="100%" width="100%">
 
