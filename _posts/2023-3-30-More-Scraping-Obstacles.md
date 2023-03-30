@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SMore scraping obstacles.  
+title: More scraping obstacles.  
 ---   
 Matt told me I really need to get at least 500 posts' worth of data to proceed with the data exploration so I've been at it since Tuesday.  So frustrating, I thought I had my scraping code finalized on Saturday and yet it hasn't worked well enough to get me the complete data set.  Here are some of the obstacles:  
 
