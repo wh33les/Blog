@@ -2,7 +2,7 @@
 layout: post
 title: Machine learning&#58; PCA  
 --- 
-PCA stands for Principal Component Analysis.  It's what's called an _unsupervised learning_ algorithm and it's a (clever!) way of reducing the number of dimensions in a data set.  As a bonus, it reveals correlations between features.  In this post I want to explain the idea, the math behind it (why it's clever), and how I used it in my project.  This is a new topic for me, but I want to try to explain it to the best of my abilities.  This post is going to take some research and citations, mainly from Matt's data science boot camp lecture on the topic.  I'm assuming the reader has a very basic background in statistics (mainly voabulary words), linear algebra (matrices, vectors, and maybe eigenvectors/eigenvalues), and maybe calculus (using derivatives to optimize).  
+PCA stands for Principal Component Analysis.  It's what's called an _unsupervised learning_ algorithm and it's a (clever!) way of reducing the number of dimensions in a data set.  As a bonus, it reveals correlations between features.  In this post I want to explain the idea, the math behind it (why it's clever and why it reveals correlations between features), and how I used it in my project.  This is a new topic for me, but I want to try to explain it to the best of my abilities.  This post is going to take some research and citations, mainly from Matt's data science boot camp lecture on the topic.  I'm assuming the reader has a very basic background in statistics (mainly voabulary words), linear algebra (matrices, vectors, and maybe eigenvectors/eigenvalues), and maybe calculus (using derivatives to optimize).  
 
 ## The idea
 
