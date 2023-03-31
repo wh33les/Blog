@@ -2,7 +2,11 @@
 layout: post
 title: Machine learning&#58; PCA  
 --- 
-PCA stands for Principal Component Analysis.  It's a (clever!) way of reducing the number of dimensions in a data set.  As a bonus, it reveals correlations between the features for the data set.  In this post I want to explain the idea, the math behind it (why it's clever), and how I used it.  I want to explain to the best of my abilities but this post is going to use some research, mainly from Matt's data science boot camp lecture on the topic.
+PCA stands for Principal Component Analysis.  It's what's called an _unsupervised learning_ algorithm and it's a (clever!) way of reducing the number of dimensions in a data set.  As a bonus, it reveals correlations between features.  In this post I want to explain the idea, the math behind it (why it's clever), and how I used it in my project.  This is a new topic for me, but I want to try to explain it to the best of my abilities.  Still, this post is going to take some research and citations, mainly from Matt's data science boot camp lecture on the topic.  I'm assuming the reader has a very basic background in statistics (mainly voabulary words), linear algebra (matrices, vectors, and maybe eigenvectors/eigenvalues), and maybe calculus (using derivatives to optimize).  
 
-### The idea
+## The idea
+
+Most data sets in practice have a large number of features, and it's impossible to graph them when there are more than 3.  PCA resets the coordinate system so that only a few of the new coordinate vectors are needed to capture most of the variance in the data, while the rest of the coordinate vectors are small enough that they can be "flattened" (eliminated).  This is useful when running _supervised learning_ algorithms on the data, since fewer dimensions makes the algorithms faster.
+
+More abstractly, say you have a matrix of data, where the columns are indexed by the features of a data set and the rows give the observations for each feature.  PCA turns that matrix into an ordered list of vectors.  The first vector points in the direction of the highest amount of variance in the data, the second vector points in the direction of the highest amount of variance, out of all of the vectors that are perpendicular to the first.  The third vector points in the direction of the highest amount of variance out of all the vectors perpendicular to both the first and the second, and so on.  The vectors are the **PCA components**.  If one changes coordinates to the coordinate system given by the components, 
 
