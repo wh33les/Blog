@@ -12,7 +12,7 @@ More abstractly, say you have a matrix of data, where the columns are indexed by
 
 The following visualization is a data set with two features, $x1$ and $x2$.  The second visualization is the data replotted with the new coordinate system.  The variance in the data from the first graph is preserved in the second graph.
 
-<img src="images/data_with_components.png"> </img><img src="images/transformed_data.png"></img>
+<img src="images/data_with_components.png" alt="Original data with PCA component vectors> </img><img src="images/transformed_data.png" alt="Data with the PCA components as coordinate vectors"></img>
 
 ## The math
 
