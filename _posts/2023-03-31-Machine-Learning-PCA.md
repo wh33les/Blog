@@ -10,8 +10,9 @@ Most data sets in practice have a large number of features, and it's impossible 
 
 More abstractly, say you have a matrix of data, where the columns are indexed by the features of a data set and the rows give the observations for each feature.  PCA turns that matrix into an ordered list of vectors.  The first vector points in the direction of the highest amount of variance in the data, the second vector points in the direction of the highest amount of variance, out of all of the vectors that are perpendicular to the first.  The third vector points in the direction of the highest amount of variance out of all the vectors perpendicular to both the first and the second, and so on.  The vectors are the **PCA components**.  Each component has an "explained variance ratio", ordered from greatest to least in the component vectors, and so we can safely drop most of the components when the first few explained variance ratios add up to close to 100%. 
 
-Here is a visualization illustrating the idea:
-<img src="images/data_with_components.png"> </img>
+The following visualization is a data set with two features, $x1$ and $x2$.  The second visualization is the data replotted with the new coordinate system.  The variance in the data from the first graph is preserved in the second graph.
+
+<img src="images/data_with_components.png"> </img><img src="images/transformed_data.png"></img>
 
 ## The math
 
