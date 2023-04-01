@@ -10,14 +10,16 @@ Most data sets in practice have a very large number of features, and it's imposs
 
 More abstractly, say you have a matrix of data, where the columns are indexed by the features of a data set and the rows give the observations for each feature.  PCA turns that matrix into an ordered list of vectors.  The first vector points in the direction of the highest amount of variance in the data, the second vector points in the direction of the highest amount of variance, out of all of the vectors that are perpendicular to the first.  The third vector points in the direction of the highest amount of variance out of all the vectors perpendicular to both the first and the second, and so on.  The vectors are the **PCA components**.  Each component has an "explained variance ratio", ordered from greatest to least in the component vectors, and so we can safely drop most of the components when the first few explained variance ratios add up to close to 100%. 
 
-The following visualizations are from Matt's data science bootcamp lecture on PCA from fall 2022.  The first visualization is a data set with two features, $`x_1`$ and $`x_2`$.  The arrows on the graph are the PCA components.  The longer one is the first one and the shorter one is the second one.  The PCA components are always ordered from longest to shortest.  The second visualization is the data replotted with the new coordinate system given by PCA.  The point is that the variance in the data from the first graph is preserved in the second graph, the data points have just been rotated and scaled to make a more homogeneous picture.
-<!--
+The following visualizations are from Matt's data science bootcamp lecture on PCA from fall 2022.  The first visualization is a data set with two features, $x_1$ and $x_2$.  The arrows on the graph are the PCA components.  The longer one is the first one and the shorter one is the second one.  The PCA components are always ordered from longest to shortest.  The second visualization is the data replotted with the new coordinate system given by PCA.  The point is that the variance in the data from the first graph is preserved in the second graph, the data points have just been rotated and scaled to make a more homogeneous picture.
+
 <img src="https://wh33les.github.io/images/data_with_components.png" alt="Original data with PCA component vectors" title="Original data with PCA component vectors" width=49%> </img>
 <img src="https://wh33les.github.io/images/transformed_data.png" alt="Data with the PCA components as coordinate vectors" title="Data with the PCA components as coordinate vectors" width=49%></img>
--->
+
+<!--
 ![Original data with PCA component vectors](https://wh33les.github.io/images/data_with_components.png)
 ![Data with the PCA components as coordinate vectors](https://wh33les.github.io/images/transformed_data.png)
-The axes in the second graph are spanned by the PCA components.  Since the first component is so much longer than the second component, with the highest amount of variance in the first graph stretched out horizontally in the second graph, the data points in the second graph can be flattened to the $`x`$-axis without losing information about the variance.  Flattening reduces this data set with 2 dimensions to one with 1 dimension.
+-->
+The axes in the second graph are spanned by the PCA components.  Since the first component is so much longer than the second component, with the highest amount of variance in the first graph stretched out horizontally in the second graph, the data points in the second graph can be flattened to the $x$-axis without losing information about the variance.  Flattening reduces this data set with 2 dimensions to one with 1 dimension.
 
 ## The math
 
