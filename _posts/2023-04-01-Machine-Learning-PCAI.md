@@ -39,6 +39,6 @@ For each PCA component $\vec w$, the variance Var$(X\vec w)$ is called the **exp
 
 **Note&#58;**  The vectors $X\vec w$, where $\vec w$ is a PCA component, are linear combinations of the features vectors.  If some features are on a larger scale than others, then they will be overrepresented in the vectors $X\vec w$.  For this reason, the features should be put on the same scale before running the algorithm in order to capture the true nature of the data.
 
-For more a practical application of PCA in the NBA, see [Matt's blog post](https://matthew-osborne.com/mtodata/Posts/PCA-in-NBA.html) on the subject!
+For a more practical application of PCA in the NBA, see [Matt's blog post](https://matthew-osborne.com/mtodata/Posts/PCA-in-NBA.html) on the subject!
 
 
