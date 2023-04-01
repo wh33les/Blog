@@ -2,7 +2,7 @@
 layout: post
 title: Machine learning&#58; PCA  
 --- 
-PCA stands for Principal Component Analysis.  It's what's called an _unsupervised learning_ algorithm and it's a (clever!) way of reducing the number of dimensions in a data set.  As a bonus, it reveals correlations between features.  In this post I want to explain the idea, the math behind it (why it's clever and why it reveals correlations between features), and how I used it in my project.  This is a new topic for me, but I want to try to explain it to the best of my abilities.  This post is going to take some research and citations, mostly from Matt's data science boot camp lecture on the topic.  I'm assuming the reader has a very basic background in statistics (mainly voabulary words), linear algebra (matrices, vectors, and maybe eigenvectors/eigenvalues), and maybe calculus (using derivatives to optimize).  
+PCA stands for Principal Component Analysis.  It's what's called an _unsupervised learning_ algorithm and it's a (clever!) way of reducing the number of dimensions in a data set.  As a bonus, it reveals correlations between features.  In this post I want to explain the idea, the math behind it (why it's clever and why it reveals correlations between features), and how I used it in my project.  This is a new topic for me, but I want to try to explain it to the best of my abilities.  This post is going to take some research and citations, mostly from Matt's data science boot camp lecture on the topic.  I'm assuming the reader has a very basic background in statistics (mainly voabulary words) and linear algebra (matrices, vectors, and maybe eigenvectors/eigenvalues).  
 
 ## The idea
 
@@ -10,7 +10,7 @@ Most data sets in practice have a very large number of features, and it's imposs
 
 More abstractly, say you have a matrix of data, where the columns are indexed by the features of a data set and the rows give the observations for each feature.  PCA turns that matrix into an ordered list of vectors.  The first vector points in the direction of the highest amount of variance in the data, the second vector points in the direction of the highest amount of variance, out of all of the vectors that are perpendicular to the first.  The third vector points in the direction of the highest amount of variance out of all the vectors perpendicular to both the first and the second, and so on.  The vectors are the **PCA components**.  Each component has an "explained variance ratio", ordered from greatest to least in the component vectors, and so we can safely drop most of the components when the first few explained variance ratios add up to close to 100%. 
 
-The following visualizations are from Matt's data science bootcamp lecture on PCA from fall 2022.  The first visualization is a data set with two features, $x_1$ and $x_2$.  The arrows on the graph are the PCA components.  The longer one is the first one and the shorter one is the second one.  The PCA components are always ordered from longest to shortest.  The second visualization is the data replotted with the new coordinate system given by the PCA components.  The point is that the variance in the data from the first graph is preserved in the second graph, the data points have just been rotated and scaled to make a more homogeneous picture.
+The following visualizations are from Matt's data science bootcamp lecture on PCA from fall 2022.  The first visualization is a data set with two features, $x_1$ and $x_2$.  The arrows on the graph are the PCA components, scaled so that their magnitude matches the variance of the data in that direction.  The second visualization is the data replotted with the new coordinate system given by the PCA components.  The point is that the variance in the data from the first graph is preserved in the second graph, the data points have just been rotated to make a more homogeneous picture.
 
 <img src="https://wh33les.github.io/images/data_with_components.png" alt="Original data with PCA component vectors" title="Original data with PCA component vectors" width=49%> </img>
 <img src="https://wh33les.github.io/images/transformed_data.png" alt="Data with the PCA components as coordinate vectors" title="Data with the PCA components as coordinate vectors" width=49%></img>
@@ -19,7 +19,7 @@ The following visualizations are from Matt's data science bootcamp lecture on PC
 ![Original data with PCA component vectors](https://wh33les.github.io/images/data_with_components.png)
 ![Data with the PCA components as coordinate vectors](https://wh33les.github.io/images/transformed_data.png)
 -->
-Since the first component is so much longer than the second component, with the highest amount of variance in the first graph stretched out horizontally in the second graph, the data points in the second graph can be flattened to the $x$-axis without losing information about the variance.  Flattening reduces this data set with 2 dimensions to one with 1 dimension.
+Now that we can see the highest amount of variance in the first graph stretched out horizontally in the second graph, the data points in the second graph can be flattened to the $x$-axis without losing much information about the variance.  Flattening reduces this data set with 2 dimensions to one with 1 dimension.
 
 ## The math
 
@@ -31,4 +31,6 @@ $$
 $$
 but since we've standardized the features to have expectation $0$, E$(X^TX)$ is just the covariance matrix!  
 
-Furthermore, the problem of maximizing a quadratic form $\vec x^TA\vec x$, where $A$ is a symmetric matrix and $||\vec x||=1$, is a standard problem in linear algebra called the **constrained optimization problem**.  The solution is the eigenvectors of $A$, and the maximum values are the eigenvalues of $A$.
+Furthermore, the problem of maximizing any quadratic form $\vec x^TA\vec x$, where $A$ is a symmetric matrix and $||\vec x||=1$, is a standard problem in linear algebra called the **constrained optimization problem**.  The solution is well-known (though not obvious, it's a theorem).  It's the eigenvector of $A$ corresponding to the highest eigenvalue, and that eigenvalue is the maximum value attained by the quadratic form.  
+
+But what about the second highest value attained?  If we impose the constraint that the second PCA component is orthogonal to the first one and of unit length (so we don't warp our data with the change of coordinates), then we have another theorem in linear algebra that says the second highest value attained is the second highest eigenvalue.  And it continues this way to get the next highest value, etc.
