@@ -27,7 +27,7 @@ The problem PCA solves is an optimization problem.  Let $X$ be the $m\times n$ m
 
 To make this problem simpler, it is typical to scale $X_1,\dots,X_n$ so that they have expectation $0$.  We also impose the convention that $||\vec w||=1$.  Then the problem reduces to maximizing 
 
-$$\text{Var}(X\vec w) = \text{E}(\vec w^TX^TX\vec w) = \vec w^T\tect{E}(X^TX)\vec w.$$
+$$\text{Var}(X\vec w) = \text{E}(\vec w^TX^TX\vec w) = \vec w^T\text{E}(X^TX)\vec w.$$
 
 E$(X^TX)$ is just the covariance matrix!  
 
