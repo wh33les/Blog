@@ -4,7 +4,7 @@ title: Machine learning&#58; PCA I
 --- 
 PCA stands for Principal Component Analysis.  It's what's called an _unsupervised learning_ algorithm and it's a (clever!) way of reducing the number of dimensions in a data set.  As a bonus, it reveals correlations between features.  
 
-As I was writing this blog post, I realized it was taking a very long time to make sure I have everything right, and it was getting really long, too, so I broke this post into two posts.  In this first post I want to explain the idea of PCA the math behind it, and then in the next post I want to talk about how I used it in my project and list some additional questions I have about it.
+As I was writing this blog post, I realized it was taking a very long time to make sure I have everything right, and it was getting really long, too, so I broke this post into two posts.  In this first post I want to explain the idea of PCA and the math behind it, and then in the next post I want to talk about how I used it in my project and list some additional questions I have about it.
 
 Most of my understanding of PCA comes from Matt's data science bootcamp lecture on the topic.  For this post, where I try to explain things in my own words, I'm assuming the reader has a very basic background in statistics (mainly voabulary words) and linear algebra (a first course).  
 
@@ -26,12 +26,12 @@ Now that we can see the highest amount of variance in the first graph spread hor
 The problem PCA solves is an optimization problem.  Let $X$ be the $m\times n$ matrix whose columns are vectors $X_1,\dots,X_n$ corresponding to the features.  Each vector $X_i$ is $m\times 1$, and the entries are the observations of that feature.  We wish to find a projection of the feature vectors to a vector $\vec w$, that has maximum variance, in other words, we want to maximize Var$(X\vec w)$.  
 
 To make this problem simpler, it is typical to scale $X_1,\dots,X_n$ so that they have expectation $0$.  We also impose the convention that $||\vec w||=1$.  Then the problem reduces to maximizing 
-$$
-\text{Var}(X\vec w) = \text{E}(\vec w^TX^TX\vec w) = \vec w^T\tect{E}(X^TX)\vec w,
-$$
-but since we've standardized the features to have expectation $0$, E$(X^TX)$ is just the covariance matrix!  
 
-Furthermore, the problem of maximizing any quadratic form $\vec x^TA\vec x$, where $A$ is a symmetric matrix and $||\vec x||=1$, is a standard problem in linear algebra called the **constrained optimization problem**.  The solution is well-known (though not obvious, it's a theorem).  It's the eigenvector of $A$ corresponding to the highest eigenvalue, and that eigenvalue is the maximum value attained by the quadratic form.  
+$$\text{Var}(X\vec w) = \text{E}(\vec w^TX^TX\vec w) = \vec w^T\tect{E}(X^TX)\vec w.$$
+
+E$(X^TX)$ is just the covariance matrix!  
+
+It turns out the problem of maximizing any quadratic form $\vec x^TA\vec x$, where $A$ is a symmetric matrix and $||\vec x||=1$, is a standard problem in linear algebra called the **constrained optimization problem**.  The solution is well-known (though not obvious, it's a theorem).  It's the eigenvector of $A$ corresponding to the highest eigenvalue, and that eigenvalue is the maximum value attained by the quadratic form.  
 
 But what about the second highest value attained?  If we impose the constraint that the second PCA component is orthogonal to the first one and of unit length (so we don't distort our data with the change of coordinates), then we have another theorem in linear algebra that says the second highest value attained is the second highest eigenvalue.  And it continues this way to get the next highest value, etc.
 
