@@ -38,6 +38,8 @@ This was my biggest question and I didn't address it at all in my previous post.
 **2. What vectors are output with the command `pca.components_`?**
 Because these vectors have contributions from the features vectors I thought they were the vectors $X\vec w$.  However, I think the documentation for PCA says they are just the PCA components $\vec w$.
 
-**3. How strong are the correlations of features contributing to later vectors $X\vec w$?**
+**3. How strong are the correlations of features contributing to later vectors $X\vec w$?**  My guess is that they are not as strong because the later PCA components $\vec w$ correspond to smaller singular values, i.e., directions with smaller variance.
+
+Unfortunately I have to put this project on pause for the next couple of weeks while I work on another project for Matt's data visualization minicourse.  Maybe after stepping away for a bit I can come back with a clearer mind and be able to answer these questions myself.  Or maybe as I gain more experience with data science and data analysis things will become more intuitive to me.  Matt has also suggested I use another unsupervised learning technique on my data: clustering.  I'll be sure to share what I learn about it.
 
 
