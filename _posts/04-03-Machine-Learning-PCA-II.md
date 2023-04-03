@@ -26,15 +26,18 @@ component_vectors.sort_values(by = component_vectors.columns[0], ascending = Fal
 ```
 The result is a matrix whose columns are the vectors $X\vec w$, where $\vec w$s are the PCA components.  The rows are ordered in descending order of the contributions to the first vector $X\vec w$ from each tag vector.  The top five positive contributions come from the tags "2024 Republican Primary", "Donald Trump", "Ron DeSantis", "2024 Presidential Election", and "2024 Election", and it makes sense that these tags frequently appear together.  Similarly, the top five negative contributions come from the tags "2022 Election", "2022 Midterms", "2022 Senate Elections", "Election Update", and "Georgia Senate".  It makes sense that these tags are correlated and at the same time rarely appear with any of the other five tags.  To find other correlated features we just look at the top contributions to the other vectors $X\vec w$.
 
-My inclination was to run PCA on all the tags, to see if, for example, certain topics are more likely to appear as videos or podcasts.  I did it and found correlations between "Qatar", ""US Mens National Team"", "FIFA World Cup", "World Cup", and "Controversy", and "2022 Election", "2022 Midterms", "Politics Podcast", "Video", and "Donald Trump".  I also ran PCA on authors v. all tags, but I'm not sure how to interpret the results.  Are the top contributions tags that one author tends to write about?  How can I tell which author?
+My inclination was to run PCA on all the tags, to see if, for example, certain topics are more likely to appear as videos or podcasts.  I did it and found correlations between "Qatar", ""US Mens National Team"", "FIFA World Cup", "World Cup", and "Controversy"; and "2022 Election", "2022 Midterms", "Politics Podcast", "Video", and "Donald Trump".  I also ran PCA on authors v. all tags, but I'm not sure how to interpret the results.  Are the top contributions tags that one author tends to write about?  How can I tell which author?
 
 ## Lingering questions
 
 PCA is a helpful tool that I hadn't known about before.  I've done my best to try to understand what it is and how it works, but still, some questions remain.
+
 **1. How does PCA reveal correlated features?**
 This was my biggest question and I didn't address it at all in my previous post.  Since then I've thought about it and here's my guess.  PCA components point in the direction of the highest variance of the data, and so if certain features have high contributions, then observations with those features tend to appear at the edge of the variance in the data.
+
 **2. What vectors are output with the command `pca.components_`?**
 Because these vectors have contributions from the features vectors I thought they were the vectors $X\vec w$.  However, I think the documentation for PCA says they are just the PCA components $\vec w$.
+
 **3. How strong are the correlations of features contributing to later vectors $X\vec w$?**
 
 
