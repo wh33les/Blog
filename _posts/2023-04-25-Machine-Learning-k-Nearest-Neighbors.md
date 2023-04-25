@@ -9,7 +9,9 @@ So what is $k$NN?  It's a classification algorithm, and it falls into supervised
 So how does it work?  First you plot all of the non-categorical features against each other.  Then for each data point, record its category, along with the categories of the $k$ data points that are closest to it (in the TA application I had to use $k=5$).  Then the predicted category is the one that shows up the most times.  Matt says if there is a tie then the winner is chosen at random, but I believe there are actual algorithms that can break ties.  And that's it!
 
 Here is a visualization from my application.  The non-categorical features are in the variable $X$, and there are two of them plotted against each other.  The variable $y$ can take on the value either $0$ or $1$.  I've color-coded the data points according to category.
+
 <img src="https://wh33les.github.io/images/kNN.png" alt="kNN with 3 features" title="kNN with 3 features"> </img>
+
 (The axes are so-labelled because in splitting the data I had to make a modification.)  The algorithm determines what color each dot should be, according to the colors of its closest neighbors.
 
 There is a Python module that will do $k$NN, called `sklearn.neighbors`.  From there, it's just a few lines of code to run the algorithm.  Here it is, after splitting the data into train data and test data.  X_train is the train data for the non-categorical features and y_train is the train data for the categorical feature we wish to predict.
