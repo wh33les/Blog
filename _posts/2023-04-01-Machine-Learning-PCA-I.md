@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Machine learning&#58; PCA I
-usemathjax: true
 --- 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 PCA stands for Principal Component Analysis.  It's what's called an _unsupervised learning_ algorithm and it's a (clever!) way of reducing the number of dimensions in a data set.  As a bonus, it reveals correlations between features.  
 
 As I was writing this blog post, I realized it was taking a very long time to make sure I have everything right, and it was getting really long, too, so I broke this post into two posts.  In this first post I want to explain the idea of PCA and the math behind it, and then in the next post I want to talk about how I used it in my project and list some additional questions I have about it.
