@@ -10,7 +10,8 @@ So how does it work?  First you plot all of the non-categorical features against
 
 Here is a visualization from my application.  The non-categorical features are in the variable $X$, and there are two of them plotted against each other.  The variable $y$ can take on the value either $0$ or $1$.  I've color-coded the data points according to category.
 
-<img src="../images/kNN.png" alt="kNN with 3 features" title="kNN with 3 features">
+<!--<img src="/images/kNN.png" alt="kNN with 3 features" title="kNN with 3 features">-->
+![kNN with 3 features](imagas/kNN.png)
 
 (The axes are so-labelled because in splitting the data I had to make a modification.)  The algorithm determines what color each dot should be, according to the colors of its closest neighbors.
 
