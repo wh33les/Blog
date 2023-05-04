@@ -12,9 +12,6 @@ Along the way I noticed there was missing data.  Matt did a lecture during the l
 ```
 for column in ["HomePlanet", "CryoSleep", "Destination", "VIP"]:
     cleaned_train_data.loc[cleaned_train_data[column].isna(), column] = cleaned_train_data[column].mode()
-    cleaned_train_data[column].fillna(cleaned_train_data[column].mode()[0], inplace=True) 
-    # code found at https://stackoverflow.com/questions/40619445/how-to-replace-na-values-with-mode-of-a-dataframe-column-in-python
-
 ```
 with&colon; 
 ```
@@ -22,3 +19,8 @@ for column in ["HomePlanet", "CryoSleep", "Destination", "VIP"]:
     cleaned_train_data[column].fillna(cleaned_train_data[column].mode()[0], inplace=True) 
     # code found at https://stackoverflow.com/questions/40619445/how-to-replace-na-values-with-mode-of-a-dataframe-column-in-python
 ```
+After that I thought that since the "Cabin" data was formatting according to deck/number/side, "deck" and "side" might be features that need to be taken into account.  Luckily it wasn't too hard to break this data into two new columns.
+
+After that I was ready to try the algorithm.  Unfortunatly, $k$nn cannot take categorical data types after all.  I looked up ways to convert categorical data to numerical data.  One way is to just assign a number to each member of the category.  However, that puts arbitrary weight on members of the category that are assigned higher numbers.  The method I found to avoid this problem is called **one-hot encoding**.  One-hot encoding creates a column for every member of the category and then assigns a 1 if that member is observed and a 0 otherwise.  This is exactly what I used in the 538 project, without realizing what it was!  In that project I had used it for PCA, and so I began to think maybe PCA would be a better algorithm for this challenge.  My reasoning was that if being transferred was correlated with any of the other features, then I would be able to see it with PCA.  I'd actually thought of doing that with the data first thing (remember, I only know 2 algorithms), but couldn't because of the categorical data.  There is a one-hot encoding function but before I could figure out how to implement it I ran out of time (maybe I'll try it on my 538 data).  Also found out there is an imputing function.  Maybe if I'd known about it I wouldn't have had to spend so much time fixing that error.
+
+So in the 3 hours I was only able to clean the data, except for the one-hot encoding.  I didn't really have a choice but to clean the data first, or else no predicting algorithm would've worked.  I think had I gotten past the cleaning I would've done PCA first.  I don't know how $k$nn would've worked with one-hot encoding.  It would've been nice to have a completed analysis even if the best algorithm was not PCA or $k$nn, but I was told that employers don't necessarily expect interviewees to finish the data challenge.  I was hoping to impress the other members of my cohort at the problem session tomorrow, maybe I will, but I'll definitelhy learn something.
