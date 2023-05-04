@@ -1,15 +1,15 @@
 # This file contains configuration flags to customize your site
 
 # Name of your site (displayed in the header)
-name: wh33les
+name: Adventures in learning code 
 
 # Short bio or description (displayed in the header)
 description: Trained mathematician learning code.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: #wh33les.github.io/images/catVersionOfMe.jpg
+avatar: wh33les.github.io/Blog/images/catVersionOfMe.jpg
 # https://github.com/wh33les/wh33les.github.io/blob/master/images/catVersionOfMe.jpg
- https://raw.githubusercontent.com/wh33les/wh33les.github.io/master/images/catVersionOfMe.jpg
+# https://raw.githubusercontent.com/wh33les/wh33les.github.io/master/images/catVersionOfMe.jpg
  # https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 
 #
