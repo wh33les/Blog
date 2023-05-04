@@ -13,7 +13,7 @@ Along the way I noticed there was missing data.  Matt did a lecture during the l
 for column in ["HomePlanet", "CryoSleep", "Destination", "VIP"]:
     cleaned_train_data.loc[cleaned_train_data[column].isna(), column] = cleaned_train_data[column].mode()
 ```
-with&colon; 
+with&#58; 
 ```
 for column in ["HomePlanet", "CryoSleep", "Destination", "VIP"]:
     cleaned_train_data[column].fillna(cleaned_train_data[column].mode()[0], inplace=True) 
