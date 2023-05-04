@@ -8,7 +8,7 @@ So what is $k$NN?  It's a classification algorithm, and it falls into supervised
 
 So how does it work?  First you plot all of the non-categorical features against each other.  Then for each data point, record its category, along with the categories of the $k$ data points that are closest to it (in the TA application I had to use $k=5$).  Then the predicted category is the one that shows up the most times.  Matt says if there is a tie then the winner is chosen at random, but I believe there are actual algorithms that can break ties.  And that's it!
 
-Here is a visualization from my application.  The non-categorical features are in the variable $X$, and there are two of them plotted against each other.  The variable $y$ can take on the value either $0$ or $1$.  I've color-coded the data points according to category.!
+Here is a visualization from my application.  The non-categorical features are in the variable $X$, and there are two of them plotted against each other.  The variable $y$ can take on the value either $0$ or $1$.  I've color-coded the data points according to category.
 
 <!--<img src="/images/kNN.png" alt="kNN with 3 features" title="kNN with 3 features">-->
 ![kNN with 3 features](./images/kNN.png)
