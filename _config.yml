@@ -7,7 +7,8 @@ name: Adventures in learning code
 description: Trained mathematician learning code.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: wh33les.github.io/Blog/images/catVersionOfMe.jpg
+avatar: https://github.com/wh33les/Blog/blob/master/images/catVersionOfMe.jpg
+#3wh33les.github.io/Blog/images/catVersionOfMe.jpg
 # https://github.com/wh33les/wh33les.github.io/blob/master/images/catVersionOfMe.jpg
 # https://raw.githubusercontent.com/wh33les/wh33les.github.io/master/images/catVersionOfMe.jpg
  # https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
