@@ -8,9 +8,10 @@ Since I've been working on my Unix proficiency, I downloaded [Cygwin](https://ww
 >Cygwin is a Unix-like environment and command-line interface for Microsoft Windows. Cygwin is huge and includes most of the Unix tools and utilities. It also include[s] the commonly-used Bash shell.
 <br> _-- from <a href="https://www3.ntu.edu.sg/home/ehchua/programming/index.html">yet another insignificant programming notes...</a>_
 
-First, a shoutout to the users on this [stackoverflow forum](https://stackoverflow.com/questions/21922469/how-do-i-assign-values-to-an-array-using-scanf-within-a-for-loop) whose snippets were helpful in debugging my thing.  Nonetheless, it took me awhile to find the mistake.  I also learned while writing the portion that validates the user input, that C has no way to return the type of a variable.  And so, while I can ensure the user's input of an integer is between 0 and 9 inclusive, I can't ensure the input is actually an integer.
+First, a shoutout to the users on this [stackoverflow forum](https://stackoverflow.com/questions/21922469/how-do-i-assign-values-to-an-array-using-scanf-within-a-for-loop) whose snippets were helpful in debugging my thing.  Nonetheless, it took me awhile to find the mistake.  I also learned while writing the portion that validates the user input, that C has no way to return the type of a variable.  And so, while I can ensure the user's input of an integer is between 0 and 9 inclusive, I can't ensure the input is actually an integer.!
 
-<img src="https://wh33les.github.io/images/seasonedC.png" title="seasoned C" height="100%" width="100%">  
+<!--<img src="https://wh33les.github.io/images/seasonedC.png" title="seasoned C" height="100%" width="100%">-->
+![Seasoned C](./images/seasonedC.png)
 
 I called this file test-drive.c.  My intent is to rework this little program into a function among others that illustrate various data structures and sorting algorithms.  The main program shall consist of the actual tests, maybe with user prompts.  Go ahead and test this one!  
 
