@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Some studying notes.
+title: Studying notes.
 ---
 <!--<img src="https://wh33les.github.io/images/factorialPowersOfTen.png" class="wrap align-right" height="60%" width="60%">-->
 ![Factorial powers of ten](./images/factorialPowersOfTen.png)
