@@ -7,7 +7,7 @@ I got my Ph. D. in mathematics in 2014 and I have since worked in academia.  I a
  
 ## More Information
 
-You can visit my personal website at <a href="https://wh33les.github.io" target="_blank">wh33les.github.io</a>.
+You can visit my personal website at <a href="https://wh33les.github.io">wh33les.github.io</a>.
 
 <!-- ### Contact me
 
