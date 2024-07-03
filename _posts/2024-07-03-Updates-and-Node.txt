@@ -1,0 +1,5 @@
+---
+layout: post
+title: Updates and Node.
+---
+Turns out to display my 538 code all I had to do was export my Jupyter notebook to .html.  [Here's the result.](https://wh33les.github.io/538Project/ProblemStatement.html).  Since then I've done one other project, which I actually finished over a month ago but I've been busy since then.  The project is called "Do-nothing Congress".  Using Python, I used the Legiscan API to gather data on all 15,000+ bills introduced in the 118th (current) Congress as of 1 June 2024, then trained that data to predict whether a bill will become law.  The hardest part was the class imbalance -- only 64 bills actually became law, so a baseline algorithm that always predicts a bill won't become law would be accurate 
