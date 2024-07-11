@@ -3,7 +3,7 @@ layout: post
 title: Updates and Node.
 date: 2024-07-03 15:00:00 -06:00
 ---
-OK, I see that if I make more than one blog post in the same day Jekyll posts them in descending alphabetical order by title.  So this post was meant to go before [Creating a server with Node](https://wh33les.github.io/Blog/Creating-a-Server-With-Node.html).
+OK, I see that if I make more than one blog post in the same day Jekyll posts them in descending alphabetical order by title.  So this post was meant to go before [Creating a server with Node](https://wh33les.github.io/Blog/Creating-a-Server-With-Node.html).  *Update:*  Turns out I can just add a timestamp to get the multiple posts on the same day in the right order!
 
 Turns out to display my 538 code all I had to do was export my Jupyter notebook to .html.  [Here's the result.](https://wh33les.github.io/538Project/ProblemStatement.html)  
 
