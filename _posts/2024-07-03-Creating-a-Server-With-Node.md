@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating a server with Node.
-<!--date: 2024-07-03 18:00:00 -06:00-->
+date: 2024-07-03 18:00:00 -06:00
 ---
 [Here's the video I'm using to make a basic server.](https://www.youtube.com/watch?v=U8XF6AFGqlc)
 
