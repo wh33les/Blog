@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Node to MySQL.
-date: 2024-07-11 20:00:00 -06:00
+<!--date: 2024-07-11 20:00:00 -06:00-->
 ---
 I spent all of this week watching videos to learn how to access MySQL via Node.  Looked at 3 videos, and [this one by Nsquared Coding seemed to be the best.](https://www.youtube.com/watch?v=vrj9AohVhPA)  For some reason with the other videos I tried following along and got mostly permissions errors when I tried to connect to the local server using JavaScript commands.  The Nsquared Coding one not only had complete instructions for a full stack project, but it was a little different in that it used XAMPP to connect to the MySQL port and make the database. 
 
