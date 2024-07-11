@@ -1,7 +1,0 @@
----
-layout: post
-title: Node to MySQL.
----
-I spent all of this week watching videos to learn how to access MySQL via Node.  Looked at 3 videos, and [this one by Nsquared Coding seemed to be the best.](https://www.youtube.com/watch?v=vrj9AohVhPA)  For some reason with the other videos I tried following along and got mostly permissions errors when I tried to connect to the local server using JavaScript commands.  The Nsquared Coding one not only had complete instructions for a full-stack project, but it was a little different in that it used XAMPP to connect to the MySQL port and make the database. 
-
-I still ran into a lot of errors along the way.  I think one big issue was that MySQL was not installed correctly.  I uninstalled it and checked to see if my web app would still work, and it didn't.  I learned that the Node module `mysql` is just a driver, it's not actually MySQL.  When I reinstalled MySQL the MySQL server would not install, and I think I recall that happening the last time I installed it some weeks ago.  Someone online found a workaround to install 
