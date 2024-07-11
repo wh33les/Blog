@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Updates and Node.
+date: 2024-07-03 15:00:00 -06:00
 ---
 OK, I see that if I make more than one blog post in the same day Jekyll posts them in descending alphabetical order by title.  So this post was meant to go before [Creating a server with Node](https://wh33les.github.io/Blog/Creating-a-Server-With-Node.html).
 
