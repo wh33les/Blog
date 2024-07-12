@@ -3,13 +3,13 @@ layout: page
 title: About
 permalink: /about/
 ---
-I got my Ph. D. in mathematics in 2014 and I have since worked in academia.  I am now looking to broaden my horizons and include in my job searches roles in industry.  This blog is reflections about my progress in learning code (C, Python, JavaScript, and the occasional post about maching learning algorithms!).
+I got my Ph. D. in mathematics in 2014 and am now transitioning out of academia.  I am interested in machine learning, data analysis, and web development.  This blog is reflections about my progress in learning code (and the occasional post about maching learning algorithms!).
  
 ## More Information
 
 You can visit my personal website at <a href="https://wh33les.github.io">wh33les.github.io</a>.
 
-<!-- ### Contact me
+### Contact me
 
-[email@domain.com](mailto:email@domain.com) 
--->
+[leyjfk6@gmail.com](mailto:leyjfk6@gmail.com) 
+
