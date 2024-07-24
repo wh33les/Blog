@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Learning about pandas.
-date: 2024-07-24 18:00:00 -06:00
+date: 2024-07-24 12:00:00 -06:00
 ---
 I've taken a break from the Node to SQL project to get a few quicker projects on my resum&eacute;.  The current one is a data visualization in Tableau.  I downloaded some polling data from fivethirtyeight that gives presidential polling results dating from 7 April 2021 to 18 July 2024.  I may do a post on Tableau later but for now I'd like to do one on pandas, since it's been my main method of cleaning the data.
 
