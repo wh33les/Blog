@@ -5,7 +5,7 @@ permalink: /about/
 ---
 I got my Ph. D. in mathematics in 2014 and am now transitioning out of academia.  I am interested in machine learning, data analysis, and web development.  This blog is reflections about my progress in learning code (and the occasional post about maching learning algorithms!).
  
-## More Information
+### More Information
 
 You can visit my personal website at <a href="https://wh33les.github.io">wh33les.github.io</a>.
 
